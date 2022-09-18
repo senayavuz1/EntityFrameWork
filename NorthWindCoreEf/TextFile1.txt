@@ -1,0 +1,13 @@
+﻿Entity Komut satiri ile mecvut bir database'i scaffold ile claslarini cagirma
+
+--Sql Server icin DbFirst oldugunda kullanilacak komut
+dotnet ef dbcontext scaffold 
+  "Server=(localdb)\mssqllocaldb;database=Northwind;Trusted_Connection=true" 
+  Microsoft.EntityFrameworkCore.SqlServer -o Entities
+  
+--PostgreSql icin DbFirst oldugunda kullanilacak komut.
+
+dotnet ef dbcontext scaffold   
+"Server=127.0.0.1;database=Northwind;User Id=postgres;Password=qweasd"   
+Npgsql.EntityFrameworkCore.PostgreSQL 
+-o PostgreEntities
